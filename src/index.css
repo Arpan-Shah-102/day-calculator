@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik+Spray+Paint&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik Spray Paint', cursive;
+  font-weight: 100;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+body {
+  background: linear-gradient(135deg, rgb(0, 255, 195), rgb(0, 107, 82));
+  min-height: 100dvh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
