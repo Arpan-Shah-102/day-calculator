@@ -1,16 +1,26 @@
 .bar-chart {
-  display: flex;
-  max-width: 80vw;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
 
-  &.bars-24 .bar {
-    width: 30px;
+  &.bars-24 {
+    grid-template-columns: repeat(12, 1fr);
 
-    &.bar-23 {
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
+    & .bar {
+      width: 50px;
+      
+      &.bar-0 {
+        border-top-left-radius: 30px !important;
+      }
+      &.bar-11 {
+        border-top-right-radius: 30px !important;
+      }
+      &.bar-12 {
+        border-bottom-left-radius: 30px !important;
+      }
+      &.bar-23 {
+        border-bottom-right-radius: 30px !important;
+      }
     }
   }
 }
@@ -19,19 +29,17 @@ abbr {
 }
 .bar {
   background-color: #ffffff;
-  height: 50px;
-  border-radius: 4px;
+  height: 80px;
+  border-radius: 8px;
   border: 1px solid #000000;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   cursor: pointer;
   color: black;
-  line-height: 50px;
+  text-align: center;
+  line-height: 80px;
+  user-select: none;
+  font-size: 12px;
   transition: all 0.2s ease-in-out;
-
-  &.bar-0 {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
 
   &:hover {
     transform: scale(1.05);
@@ -42,8 +50,7 @@ abbr {
     opacity: 0.8;
   }
 
-  &.active.sleep {
-    background-color: #4caf50;
+  &.active {
     color: white;
   }
 }

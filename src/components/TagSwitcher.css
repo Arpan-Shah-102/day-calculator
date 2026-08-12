@@ -1,0 +1,51 @@
+.tag-switcher {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  color: black;
+  text-align: left !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  
+  & option {
+    color: black;
+    text-align: left;
+  }
+}
+.switch-tag-select {
+  width: 150px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+input[type="color"] {
+  background: none;
+  width: 45px;
+  height: 45px;
+  border: none;
+  padding: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
