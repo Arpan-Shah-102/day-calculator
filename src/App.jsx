@@ -5,9 +5,10 @@ import { ColorKey } from './components/ColorKey';
 import './App.css';
 
 function App() {
-  const [getChartData, setChartData] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+  const [getChartData, setChartData] = useState(['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
   const [getTagNames, setTagNames] = useState(['Sleep', 'Work', 'School', 'Eat', 'Exercise', 'Leisure']);
   const [getColorNames, setColorNames] = useState(['#2ca02c', '#1f77b4', '#D4A82F', '#ff7f0e', '#9467bd', '#d62728']);
+  const [getTextColors, setTextColors] = useState(['white', 'white', 'white', 'white', 'white', 'white']);
   const [getSelectedTag, setSelectedTag] = useState('Sleep');
   const [getTotalSegments, setTotalSegments] = useState(24);
 
@@ -20,6 +21,7 @@ function App() {
         getSelectedTag={getSelectedTag}
         getTagNames={getTagNames}
         getColorNames={getColorNames}
+        getTextColors={getTextColors}
       />
       <TagSwitcher
         getTagNames={getTagNames}
@@ -30,10 +32,16 @@ function App() {
         setTotalSegments={setTotalSegments}
         getColorNames={getColorNames}
         setColorNames={setColorNames}
+        getTextColors={getTextColors}
+        setTextColors={setTextColors}
+        getChartData={getChartData}
+        setChartData={setChartData}
       />
       <ColorKey
         getTagNames={getTagNames}
         getColorNames={getColorNames}
+        setSelectedTag={setSelectedTag}
+        getTextColors={getTextColors}
       />
     </>
   )

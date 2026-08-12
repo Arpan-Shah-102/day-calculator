@@ -1,8 +1,24 @@
 .bar-chart {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 1fr);
   gap: 4px;
 
+  &.bars-12 {
+    grid-template-columns: repeat(12, 1fr);
+
+    & .bar {
+      width: 50px;
+      
+      &.bar-0 {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+      &.bar-11 {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+    }
+  }
   &.bars-24 {
     grid-template-columns: repeat(12, 1fr);
 
@@ -10,16 +26,62 @@
       width: 50px;
       
       &.bar-0 {
-        border-top-left-radius: 30px !important;
+        border-top-left-radius: 30px;
       }
       &.bar-11 {
-        border-top-right-radius: 30px !important;
+        border-top-right-radius: 30px;
       }
       &.bar-12 {
-        border-bottom-left-radius: 30px !important;
+        border-bottom-left-radius: 30px;
       }
       &.bar-23 {
-        border-bottom-right-radius: 30px !important;
+        border-bottom-right-radius: 30px;
+      }
+    }
+  }
+  &.bars-48 {
+    grid-template-columns: repeat(12, 1fr);
+
+    & .bar {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 10px;
+      
+      &.bar-0 {
+        border-top-left-radius: 30px;
+      }
+      &.bar-11 {
+        border-top-right-radius: 30px;
+      }
+      &.bar-36 {
+        border-bottom-left-radius: 30px;
+      }
+      &.bar-47 {
+        border-bottom-right-radius: 30px;
+      }
+    }
+  }
+  &.bars-96 {
+    grid-template-columns: repeat(12, 1fr);
+    
+    & .bar {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 10px;
+      
+      &.bar-0 {
+        border-top-left-radius: 30px;
+      }
+      &.bar-11 {
+        border-top-right-radius: 30px;
+      }
+      &.bar-84 {
+        border-bottom-left-radius: 30px;
+      }
+      &.bar-95 {
+        border-bottom-right-radius: 30px;
       }
     }
   }
@@ -52,5 +114,79 @@ abbr {
 
   &.active {
     color: white;
+  }
+}
+
+@media (max-width: 675px) {
+  .bar-chart.bars-12 {
+    grid-template-columns: repeat(6, 1fr);
+
+    & .bar.bar-0 {
+      border-bottom-left-radius: 8px;
+    }
+    & .bar.bar-5 {
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 8px;
+    }
+    & .bar.bar-6 {
+      border-bottom-left-radius: 30px;
+    }
+    & .bar.bar-11 {
+      border-top-right-radius: 8px;
+    }
+  }
+  .bar-chart.bars-24 {
+    grid-template-columns: repeat(6, 1fr);
+
+    & .bar.bar-11 {
+      border-top-right-radius: 8px;
+    }
+    & .bar.bar-12 {
+      border-bottom-left-radius: 8px;
+    }
+    & .bar.bar-5 {
+      border-top-right-radius: 30px;
+    }
+    & .bar.bar-18 {
+      border-bottom-left-radius: 30px;
+    }
+  }
+  .bar-chart.bars-48 {
+    grid-template-columns: repeat(6, 1fr);
+
+    & .bar.bar-11 {
+      border-top-right-radius: 8px;
+    }
+    & .bar.bar-5 {
+      border-top-right-radius: 30px;
+    }
+    & .bar.bar-36 {
+      border-bottom-left-radius: 8px;
+    }
+    & .bar.bar-42 {
+      border-bottom-left-radius: 30px;
+    }
+  }
+  .bar-chart.bars-96 {
+    grid-template-columns: repeat(6, 1fr);
+
+    & .bar.bar-11 {
+      border-top-right-radius: 8px;
+    }
+    & .bar.bar-5 {
+      border-top-right-radius: 30px;
+    }
+    & .bar.bar-84 {
+      border-bottom-left-radius: 8px;
+    }
+    & .bar.bar-90 {
+      border-bottom-left-radius: 30px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .bar-chart {
+    scale: 0.9;
   }
 }

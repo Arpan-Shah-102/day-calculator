@@ -1,13 +1,14 @@
 .tag-switcher {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
   gap: 20px;
   flex-wrap: wrap;
 }
 
 select {
-  padding: 6px 12px;
+  padding: 3px 6px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
@@ -34,8 +35,8 @@ label {
 }
 input[type="color"] {
   background: none;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   border: none;
   padding: none;
   cursor: pointer;
@@ -47,5 +48,59 @@ input[type="color"] {
   &:active {
     transform: scale(0.95);
     opacity: 0.8;
+  }
+}
+
+.new-label-create {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+input[type="text"] {
+  width: 150px;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: black;
+  text-align: left !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+}
+
+button {
+  padding: 3px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+.create-button {
+  border: 1px solid darkgreen;
+  background-color: green;
+}
+.delete-tag {
+  padding: 6px 12px;
+  border: 1px solid darkred;
+  background-color: red;
+}
+.reset-chart {
+  border: 1px solid darkorange;
+  background-color: orange;
+  font-size: 16px;
+}
+
+@media (max-width: 400px) {
+  .color-key {
+    scale: 0.9;
   }
 }
